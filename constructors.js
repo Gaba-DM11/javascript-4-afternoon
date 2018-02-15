@@ -14,7 +14,10 @@
 */
 
 // Code here
-
+function CarFactory(make, model){
+  this.make = make;
+  this.model = model;
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -33,6 +36,9 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
+
+Employee('Bob', 'bob@gmail.com', '01-02-98');
+let bob = new Employee(name, email, hireDate);
 
 
 
@@ -54,5 +60,18 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
+function Car(make, model, year){
+  let move = 0;
+
+  this.make = make;
+  this.model = model;
+  this.year = year;
+
+  // move car is my function on an obj AKA Method.
+  this.moveCar = (function(){
+    return move+=10
+  });
+  
+}
 
 
